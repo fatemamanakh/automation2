@@ -1,0 +1,19 @@
+---
+- name: This playbook for Package Management
+  hosts: 
+    - linux1
+
+  pre_tasks:
+    - debug: 
+        msg: "Start Playbook"
+
+  roles:
+    - datadisk-n01521240
+    - profile-n01521240
+    - user-n01521240
+    - webserver-n01521240
+
+  post_tasks:
+    - debug: 
+        msg: "Playbook Completed Successfully"
+
